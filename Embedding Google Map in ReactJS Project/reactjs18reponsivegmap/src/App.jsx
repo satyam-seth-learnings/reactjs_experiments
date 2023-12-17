@@ -1,33 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <address id="address">
+        BBD City, Faizabad Road <br />
+        Lucknow, Uttar Pradesh - 226028
+      </address>
+      <div className='responsive-map'>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.5927476506367!2d81.0558566750097!3d26.88467717666383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be20bfb0f1d33%3A0x9f14bcf7c5d08f69!2sBBD%20Green%20City%2C%20Faizabad%20Rd%2C%20Lucknow%2C%20Uattardhona%2C%20Uttar%20Pradesh%20226028!5e0!3m2!1sen!2sin!4v1702794736564!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          allowFullScreen
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
