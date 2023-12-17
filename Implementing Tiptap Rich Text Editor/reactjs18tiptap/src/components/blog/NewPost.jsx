@@ -1,12 +1,20 @@
-import Tiptap from "../Tiptap";
+import Tiptap from "../Tiptap"
+import { useState } from 'react'
+import ShowPost from "./ShowPost";
 
 const NewPost = () => {
-  const handleEditorContentSave = (html) => {
-    console.log(html);
-  }
+  const [htmlContent, setHtmlContent] = useState('');
 
+  const handleEditorContentSave = (html) => {
+    // console.log(html);
+    setHtmlContent(html);
+  }
   return (
-    <Tiptap onEditorContentSave={handleEditorContentSave} />
+    <>
+      <Tiptap onEditorContentSave={handleEditorContentSave} />
+      <hr />
+      <ShowPost content={htmlContent} />
+    </>
   );
 }
 
