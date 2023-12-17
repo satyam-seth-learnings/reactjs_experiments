@@ -1,5 +1,5 @@
 import './App.css'
-import NewPost from './components/NewPost'
+import NewPost from './components/blog/NewPost'
 
 function App() {
 
