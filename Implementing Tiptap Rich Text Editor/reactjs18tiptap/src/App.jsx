@@ -1,12 +1,13 @@
 import './App.css'
+import NewPost from './components/NewPost'
 
 function App() {
 
   return (
     <>
-      <h1>Hello React</h1>
+      <NewPost />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
