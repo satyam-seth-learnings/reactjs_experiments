@@ -1,24 +1,30 @@
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import Underline from '@tiptap/extension-underline';
+
 const extensions = [
   StarterKit,
   Underline,
-]
-const content = ``
+];
+
+const content = ``;
+
 const Tiptap = ({ onEditorContentSave }) => {
   const editor = useEditor({
     extensions,
     content
-  })
+  });
+  
   if (!editor) {
-    return null
+    return null;
   }
+
   const handleEditorContent = () => {
-    const html = editor.getHTML()
+    const html = editor.getHTML();
     // console.log(html);
-    onEditorContentSave(html)
+    onEditorContentSave(html);
   }
+
   return (
     <div className='m-8'>
       <div className='w-full flex flex-wrap bg-gray-600 p-3 gap-3 text-white'>
